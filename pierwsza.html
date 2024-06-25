@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wpisz Hasło</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1A1616;
+        }
+        .container {
+            text-align: center;
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #000;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="password"] {
+            width: 200px;
+            height: 30px;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Podaj Hasło</h1>
+        <input type="password" id="password" placeholder="Wpisz hasło">
+        <br>
+        <button onclick="checkPassword()">OK</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const correctPassword = "gatling";  // Zastąp "tajnehaslo" swoim prawidłowym hasłem
+            const inputPassword = document.getElementById('password').value;
+
+            if (inputPassword === correctPassword) {
+                window.location.href = "druga.html";  // Przekierowanie do innej strony
+            } else {
+                alert("Nieprawidłowe hasło, spróbuj ponownie.");
+            }
+        }
+    </script>
+</body>
+</html>
